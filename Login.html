@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="StyleLogin.css">
+</head>
+
+<body>
+    <div class="background">
+        <div class="login-container">
+            <h1>Login</h1>
+            <form id="loginForm" action="Pengelolaan.html" method="POST" onsubmit="return validateLogin()">
+                <input type="text" placeholder="Username" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function validateLogin() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+                
+            if (username === "admin" && password === "admin123") {
+                return true;
+            } else {
+                alert("Username atau password salah!");
+                 return false;
+            }
+        }    
+    </script>
+
+</body>
+
+</html>
